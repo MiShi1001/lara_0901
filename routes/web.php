@@ -20,9 +20,13 @@ Route::get('/', function () {
     'content'=>'testcontent',
 ]);
 
-
+//練習 3：查詢資料
 $posts=\App\Post::all();
 dd($posts);
-*/
+
 $post=\App\Post::find(3);
 dd($post);
+*/
+
+$posts=\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
+dd($posts);
