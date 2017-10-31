@@ -37,6 +37,5 @@ $post‐>update([
     'content'=>'updatedcontent',
 ]);
 */
-$post=\App\Post::find(1);
-$post‐>delete();
+\App\Post::destroy(2);
 
