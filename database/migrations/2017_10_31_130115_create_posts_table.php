@@ -17,6 +17,8 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('content');
+            //修改 migration 檔案的內容
+            $table->text('test');
             $table->timestamps();
         });
     }
