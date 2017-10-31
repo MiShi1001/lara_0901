@@ -19,6 +19,10 @@ Route::get('/', function () {
     'title'=>'testtitle',
     'content'=>'testcontent',
 ]);
-*/
+
+
 $posts=\App\Post::all();
 dd($posts);
+*/
+$post=\App\Post::find(3);
+dd($post);
