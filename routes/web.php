@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use App\Post;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -30,10 +30,13 @@ dd($post);
 
 $posts=\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
 dd($posts);
-*/
+
 $post=\App\Post::find(1);
 $post‐>update([
     'title'=>'updatedtitle',
     'content'=>'updatedcontent',
 ]);
+*/
+$post=\App\Post::find(1);
+$post‐>delete();
 
