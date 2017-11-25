@@ -46,10 +46,15 @@ $post->update([
     'content'=>'updatedcontent',
 ]);
 */
+/*
     $post=\App\Post::find(1);
     $post->title='savedtitle';
     $post->content='savedcontent';
     $post->save();
+*/
+
+    $post=\App\Post::find(1);
+    $post->delete();
 
 \App\Post::destroy(3,5,7);
 
