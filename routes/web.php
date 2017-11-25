@@ -28,6 +28,8 @@ Route::group(['prefix'=>'admin'],function(){
         'AdminPostsController@store']);
     Route::patch('posts/{id}',['as'=>'admin.posts.update','uses'=>
 'AdminPostsController@update']);
+    Route::delete('posts/{id}',['as'=>'admin.posts.destroy','uses'=>
+'AdminPostsController@destroy']);
 
 });
 
