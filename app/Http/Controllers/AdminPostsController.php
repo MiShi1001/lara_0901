@@ -46,5 +46,10 @@ class AdminPostsController extends Controller
             return redirect()->route('admin.posts.index');
             }
 
+        public function show($id){
+            $post=Post::find($id);
+            $data=['post'=>$post];
+            return view('admin.posts.edit',$data);
+        }
 
 }
