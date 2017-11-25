@@ -17,6 +17,9 @@ class PostsTableSeeder extends Seeder
             Post::create([
                 'title'=>'title'.$number,
                 'content'=>'content'.$number,
+                'is_feature'=>rand(0,1),
+                'created_at'=>Carbon::now()->subDays($total - $number),
+                'updated_at'=>Carbon::now()->subDays($total - $number),
             ]);
         }
     }
