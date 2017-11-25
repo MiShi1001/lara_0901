@@ -39,12 +39,17 @@ dd($post);
 $posts=\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
 dd($posts);
 */
+/*
 $post=\App\Post::find(1);
 $post->update([
     'title'=>'updatedtitle',
     'content'=>'updatedcontent',
 ]);
-
+*/
+    $post=\App\Post::find(1);
+    $post->title='savedtitle';
+    $post->content='savedcontent';
+    $post->save();
 
 \App\Post::destroy(3,5,7);
 
