@@ -24,21 +24,23 @@ Route::get('test', function () {
     $post->title='testtitle';
     $post->content='testcontent';
     $post->save();
-    });
+
 /*
 //練習 3：查詢資料
 $posts=\App\Post::all();
 dd($posts);
+*/
 
+/*
 $post=\App\Post::find(3);
 dd($post);
-
-
+*/
+/*
 $posts=\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
 dd($posts);
-
+*/
 $post=\App\Post::find(1);
-$post‐>update([
+$post->update([
     'title'=>'updatedtitle',
     'content'=>'updatedcontent',
 ]);
@@ -55,4 +57,4 @@ $fourthPost=\App\Post::find(6);
 dd($fourthPost);
 $lastPost=\App\Post::orderBy('id','DESC')->first();
 dd($lastPost);
-*/
+});
