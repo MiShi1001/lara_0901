@@ -10,16 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Post;
+
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('test', function () {
+    /*
+    \App\Post::create([
+        'title' => 'testtitle',
+        'content' => 'testcontent',
+    ]);*/
+    $post=new\App\Post();
+    $post->title='testtitle';
+    $post->content='testcontent';
+    $post->save();
+    });
 /*
-\App\Post::create([
-    'title'=>'testtitle',
-    'content'=>'testcontent',
-]);
-
 //練習 3：查詢資料
 $posts=\App\Post::all();
 dd($posts);
@@ -36,16 +42,17 @@ $post‐>update([
     'title'=>'updatedtitle',
     'content'=>'updatedcontent',
 ]);
-*/
+
 
 \App\Post::destroy(3,5,7);
-/*
+
 $allPosts=\App\Post::all();
 dd($allPosts);
 $featuredPosts=\App\Post::where('is_feature',1)->get();
 dd($featuredPosts);
-*/
+
 $fourthPost=\App\Post::find(6);
 dd($fourthPost);
-$lastPost=\App\Post::orderBy('id','DESC')‐>first();
+$lastPost=\App\Post::orderBy('id','DESC')->first();
 dd($lastPost);
+*/
